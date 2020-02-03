@@ -1,26 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/styles.css">
+  <!-- Font API -->
+  <link href="https://fonts.googleapis.com/css?family=Teko:400,500,600&display=swap" rel="stylesheet">
+
   <title>Mission to Mars</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-  <div class="container text-center">
-    <h1 class="jumbotron">Mission to Mars</h1>
-    <div>
-      <ul style="list-style: none;">
-        {% for data in mars %}
-          <li>{{ data['News Title'] }}: {{ data['News Paragraph'] }}</li>
-        {% endfor %}
+
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbarthings">
+    <a class="navbar-brand" id="navbarbrand" href="index.html">Jeffrey Burgos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto" id="navbardropdownfonts">
+        <li class="nav-item ">
+          <a class="nav-link" href="resume.html">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutme.html">About Me</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Projects
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="navbardropdown">
+            <a class="dropdown-item" href="https://jeffreyb92.github.io/billboard-analysis/">Top 100 Billboard Analysis</a>
+            <div class="dropdown-divider" id="dropdowndivider"></div>
+            <a class="dropdown-item" href="https://jeffreyb92.github.io/mission-to-mars">Mission to Mars</a>
+            <div class="dropdown-divider" id="dropdowndivider"></div>
+            <a class="dropdown-item" href="https://jeffreyb92.github.io/baseball-pitching-analysis">Baseball Pitching Analysis</a>
+            <div class="dropdown-divider" id="dropdowndivider"></div>
+            <a class="dropdown-item" href="https://jeffreyb92.github.io/musical-twitter-analysis">Musical Twitter Analysis</a>
+          </div>
+        </li>
       </ul>
-      {{mars}}
     </div>
+  </nav>
+
+  <!-- Container Start -->
+  <div class="custom-container container-fluid">
+    <!--Normally these medium columns go full wide on small screen sizes-->
+    <div class="row justify-content-around" id="rowpad">
+      <div class="col-md-12 text-center" id="columnpad">
+        <p><b id="title-text">Mission to Mars</b></p>
+        <br>
+        <a class="btn btn-primary" href="/scrape" role="button">Click here to scrape new data</a>
+      </div>
+    </div>
+    <br>
+    <div class="row justify-content-around" id="rowpad">
+      <div class="col-md-7 h-100" id="columnpad">
+        <p> <b id="title-text">Data Analyst</b> with a <br>
+          <span class="bold-text">B.S. in Computer Science, M.S. in Data Science, <br> 
+          Data Scientist with Python Certificate from DataCamp,</span>
+          and currently completing a <span class="bold-text">Bootcamp in Data Analytics & Visualization </span> 
+          through <span class="bold-text">Rutgers University.</span>  I am skilled in <span class="bold-text">Python, Tableau,SQL, R, and Excel.</span>  
+          An <span class="bold-text">avid learner</span>  who works well with others, and is <span class="bold-text">passionate </span> 
+          about helping a company come to know their data on a more 
+          <span class="bold-text">profound level.</span>  Recently completed a project with a team of three 
+          others about Air Pollution change in New Jersey over the last 30 years.
+      </p> 
+        
+      </div>
+      <div class="col-md-4" id="columnpad-inv">
+        <img class="img-fluid max-width: 100%; height: auto;" id="img-padding" src="assets/images/JeffProfilePicture.jpg" alt="Jeff's Profile Picture"> 
+      </div>
+    </div>
+
   </div>
+  <!-- Container Ends -->
+
+  <!-- Footer Things -->
+  <footer id="footerthings">
+    <p>Powered By HTML, CSS, Bootstrap and FontAwesome</p>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+
+
+
+
+<!-- <span class="sr-only">(current)</span> -->
