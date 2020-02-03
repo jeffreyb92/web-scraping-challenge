@@ -28,7 +28,7 @@ def scrape():
 
     #finding the latest news title
     news_title_find = soup1.find('div', class_="content_title")
-    news_title = news_title_find
+    news_title = news_title_find.text
     # news_title.text
 
     #finding the paragraph for the latest news
@@ -73,12 +73,12 @@ def scrape():
 
     #whichever one actually has data will be the one we look through
     for tweets in mars_tweets:
-        mars = tweets
+        mars_tweet = tweets
     # print(mars)
 
     #checking to see if the latest tweet has the weather data. If it does, we set it to the variable mars_weather
     #and if it doesn't, we check the one before it
-    for tweet in mars:
+    for tweet in mars_tweet:
     #     print(tweet.text)
         if 'InSight' in tweet.text:
             mars_weather = tweet.text
@@ -134,6 +134,18 @@ def scrape():
         
         hemidict = {'title': title_text.text, 'img_url': img_url.a.get('href')}
         hemisphere_image_urls.append(hemidict)
+
+    mars_data = {
+            'News Title': news_title, 
+            'News Paragraph': news_p, 
+            'Featured Image':featured_image_url, 
+            'Mars Weather':mars_weather, 
+            'Mars Facts': mars_facts,
+            'Mars Hemisphere Images': hemisphere_image_urls
+            }
+
+    return mars_data
+
         
 
 
