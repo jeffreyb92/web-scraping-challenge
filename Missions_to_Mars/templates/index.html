@@ -63,25 +63,45 @@
       </div>
     </div>
     <br>
+    <div class="row justify-content-around" id="columnpad">
+      <h1>{{ mars[0]['News Title']}}</h1>
+      <p id="headline">{{mars[0]['News Paragraph']}}</p>
+    </div>
+    <br>
     <div class="row justify-content-around" id="rowpad">
       <div class="col-md-7 h-100" id="columnpad">
-        <p> <b id="title-text">Data Analyst</b> with a <br>
-          <span class="bold-text">B.S. in Computer Science, M.S. in Data Science, <br> 
-          Data Scientist with Python Certificate from DataCamp,</span>
-          and currently completing a <span class="bold-text">Bootcamp in Data Analytics & Visualization </span> 
-          through <span class="bold-text">Rutgers University.</span>  I am skilled in <span class="bold-text">Python, Tableau,SQL, R, and Excel.</span>  
-          An <span class="bold-text">avid learner</span>  who works well with others, and is <span class="bold-text">passionate </span> 
-          about helping a company come to know their data on a more 
-          <span class="bold-text">profound level.</span>  Recently completed a project with a team of three 
-          others about Air Pollution change in New Jersey over the last 30 years.
-      </p> 
-        
+         <b id="bold-text-weather">Featured Mars Image</b> 
+        <br> 
+        <img class="img-fluid max-width: 100%; height: auto;" src="{{mars[0]['Featured Image']}}" alt="featured mars image">
       </div>
       <div class="col-md-4" id="columnpad-inv">
-        <img class="img-fluid max-width: 100%; height: auto;" id="img-padding" src="assets/images/JeffProfilePicture.jpg" alt="Jeff's Profile Picture"> 
+        <div class="row">
+          <div class="col-md-12" id="boxborder">
+          <p id="bold-text-weather">Latest Mars Weather</p>
+          {{mars[0]['Mars Weather']}}
+          </div>
+        </div>
+        <br>
+        <p id="bold-text-weather">Mars Facts</p> 
+        {{mars[0]['Mars Facts']|safe}}
       </div>
     </div>
-
+    <br>
+<div class="row">
+  <div class="col-md-12" id="columnpad">
+    <b id="bold-text-weather">Mars Hemispheres</b> 
+  </div>
+</div>
+    <div class="row justify-content-around">
+      {% for image in mars[0]['Mars Hemisphere Images']%}
+      <div class="col-md-6" id="columnpad">
+        <img class="img-fluid max-width: 100%; height: auto;" src="{{image.img_url}}" alt="mars hemisphere image">
+        <div>
+          {{image.title}}
+        </div>
+      </div>    
+      {% endfor %}
+    </div>
   </div>
   <!-- Container Ends -->
 
